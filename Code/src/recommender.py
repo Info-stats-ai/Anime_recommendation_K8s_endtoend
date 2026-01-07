@@ -1,4 +1,4 @@
-from langchain.chains import RetrievalQA
+from langchain_classic.chains.retrieval_qa.base import RetrievalQA
 from langchain_groq import ChatGroq
 from src.prompt_template import get_anime_prompt
 
@@ -26,3 +26,4 @@ class AnimeRecommender:
         result = self.qa_chain({"query":query})
         return result['result']
         # result['result'] is the answer to the user's question
+        # it the is the dictionary
